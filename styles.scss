@@ -12,6 +12,17 @@ body {
   background-color: #2ce12f;
 }
 
+.chat_wrapper {
+  height: 470px;
+  width: 320px;
+  background-color: $black;
+
+  iframe {
+    width: 100%;
+    height: 470px;
+  }
+}
+
 .clock_wrapper {
   height: 250px;
   width: 320px;
