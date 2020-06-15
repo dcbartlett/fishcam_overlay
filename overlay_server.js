@@ -6,8 +6,9 @@ const express = require('express');
 const sass = require('node-sass');
 require('chromedriver');
 
-const app = express()
-const port = 65535
+const app = express();
+const host = '0.0.0.0';
+const port = 65535;
 
 const screen = {
   width: 1280,
@@ -35,4 +36,4 @@ app.get('/styles.css', (req, res) => {
 });
 app.get('/overlay.js', (req, res) => res.sendFile(path.join(__dirname + '/overlay.js')));
 app.get('/screenshot.png', (req, res) => res.sendFile(path.join(__dirname + '/screenshot.png')));
-app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`))
+app.listen(port, host, () => console.log(`Example app listening at http://${host}:${port}`));
